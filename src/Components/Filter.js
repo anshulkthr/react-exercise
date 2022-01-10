@@ -1,5 +1,5 @@
 import { Field, Form, Formik, ErrorMessage } from "formik";
-import { Button, TextField, Select, Loader } from "@cruk/cruk-react-components";
+import { Button, TextField, Select } from "@cruk/cruk-react-components";
 import * as yup from "yup";
 import { Grid, Row, Col } from "../Style/Common";
 
