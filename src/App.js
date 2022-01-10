@@ -1,12 +1,8 @@
-import styled, { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "styled-components";
 import { crukTheme } from "@cruk/cruk-react-components";
 import Main from './Components/Main';
+import { SiteWrapper } from "./Style/Common";
 
-const SiteWrapper = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-`;
 
 function App() {
   return (

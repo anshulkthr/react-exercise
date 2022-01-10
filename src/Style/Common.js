@@ -33,3 +33,9 @@ export const Col = styled.div`
   width: 30%;
   margin-right: 28px;
 `;
+
+export const SiteWrapper = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+`;

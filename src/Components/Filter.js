@@ -5,7 +5,10 @@ import { Grid, Row, Col } from "../Style/Common";
 
 const Filter = (params) => {
   const formSchema = yup.object().shape({
-    keywords: yup.string().required("Please enter keywords to search."),
+    keywords: yup.string()
+    .min(2, 'Keywords must be between 2 and 50 characters.')
+    .max(50, 'Keywords must be between 2 and 50 characters.')
+    .required("Please enter keywords to search."),
     mediaType: yup.string().required("Please select a media type."),
     yearStart: yup
       .number()
@@ -112,13 +115,7 @@ const Filter = (params) => {
                 </Row>
                 <Row direction="Row">
                   <Col>
-                    <>
-                      {isSubmitting ? (
-                        <Loader />
-                      ) : (
-                        <Button type="submit">Submit</Button>
-                      )}
-                    </>
+                    <Button type="submit" disabled={isSubmitting}>{ isSubmitting ? 'Submitting..' : 'Submit' }</Button>
                   </Col>
                 </Row>
               </Grid>
